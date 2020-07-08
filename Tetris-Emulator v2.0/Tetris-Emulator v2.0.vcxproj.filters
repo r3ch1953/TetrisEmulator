@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Buffer.cpp">
+      <Filter>Draw\Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Draw\Image/Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Draw\Image/Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Draw\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Cursor.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Draw">
+      <UniqueIdentifier>{84f5b72e-a7ab-4a84-9291-cb07d6f39c65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Draw\Buffer">
+      <UniqueIdentifier>{b503b8a9-054f-4fa8-8c9d-78e71925d358}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Draw\Image/Animation">
+      <UniqueIdentifier>{ce6356da-1343-47d9-92e1-a6a4d1c57b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{09ccaf7b-cacb-488c-bfdb-02e7080073d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Draw\Text">
+      <UniqueIdentifier>{5d0bb017-5e29-4919-8580-b23390c92c58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{22234487-e3ae-4807-961c-84107a042d6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{21f54897-2cc1-4768-9f54-d49b76f9e165}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Buffer.h">
+      <Filter>Draw\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Draw\Image/Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Draw\Image/Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>Draw\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="button.txt">
+      <Filter>Resource</Filter>
+    </Text>
+    <Text Include="cursor.txt">
+      <Filter>Resource</Filter>
+    </Text>
+    <Text Include="logo.txt">
+      <Filter>Resource</Filter>
+    </Text>
+    <Text Include="border.txt">
+      <Filter>Resource</Filter>
+    </Text>
+    <Text Include="mainMenuAnim.txt">
+      <Filter>Resource</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
