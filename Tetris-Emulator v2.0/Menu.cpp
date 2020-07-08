@@ -84,7 +84,7 @@ void Menu::LoadToBuffer(Buffer& buffer, __COORD coord)
 		this->buttons[i].GetBuffer().Clear();
 
 	this->cursor.LoadToBuffer(this->cursor.GetButton().GetBuffer(), __COORD{ this->GetCursor().GetButton().GetTexture().GetResolution().height / 2,
-																		this->GetCursor().GetButton().GetTexture().GetResolution().width});
+																		     this->GetCursor().GetButton().GetTexture().GetResolution().width});
 
 	size_t prevHeight = 0;
 	for (size_t i = 0; i < this->buttons.size(); i++)

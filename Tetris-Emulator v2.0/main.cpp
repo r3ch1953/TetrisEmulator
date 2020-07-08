@@ -3,6 +3,7 @@
 #include "Animation.h"
 #include "Button.h"
 #include "Menu.h"
+#include "ButtonAnimated.h"
 #include <conio.h>
 #include <iostream>
 #include <Windows.h>
@@ -19,42 +20,62 @@ void MainMenu();
 
 int main()
 {
-	MainMenu();
+	//MainMenu();
+
+	Buffer testb(Image::FindResolution("SGM_concept.txt"));
+
+	Animation test("SGM_buttonDefault.txt", Animation::GetFramesCount("SGM_buttonDefault.txt"));
+	
+	ButtonAnimated b(test, nullptr, "MM_cursor.txt");
+
+	while(true) { 
+
+		b.LoadToBuffer(testb, __COORD{ 10,10 }, __COORD{b.GetAnimation().GetFrame(0).GetResolution().height / 2, 
+			                                            b.GetAnimation().GetFrame(0).GetResolution().width / 2 });
+
+		testb.Print();
+		Sleep(100);
+		setcur(0, 0);
+	}
+		
+	
 
 	return 0;
 }
 
 void MainMenu()
 {
-	Buffer buffer(Image::FindResolution("border.txt"));
+	Buffer buffer(Image::FindResolution("MM_border.txt"));
 
-	Animation mainMenuAnimation("mainMenuAnim.txt", 23);
+	Animation mainMenuAnimation("MM_anim.txt", 23);
 
 	Image logo, border;
 
-	logo.SetImage("logo.txt", Image::FindResolution("logo.txt"), 1);
+	Label control1("W/S - UP/DOWN,");
+	Label control2("Enter - Confirm.");
+	control1.SetColor(Color::GRAY);
+	control2.SetColor(Color::GRAY);
+
+	logo.SetImage("MM_logo.txt", Image::FindResolution("MM_logo.txt"), 1);
 	logo.SetColor(Color::LIGHTAQUA);
 
-	border.SetImage("border.txt", Image::FindResolution("border.txt"), 1);
-
-	border.LoadToBuffer(buffer, __COORD{ 0,0 });
-	logo.LoadToBuffer(buffer, __COORD{ 1,2 });
+	border.SetImage("MM_border.txt", Image::FindResolution("MM_border.txt"), 1);
 
 	Menu menu([](Menu& menu) {
 		Label label1("Play");
-		Button button1(label1, Image::GetFrameFromFile("button.txt", Image::FindResolution("button.txt"), 1), nullptr);
+		Button button1(label1, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), nullptr, "MM_cursor.txt");
 		Label label3("Settings");
-		Button button3(label3, Image::GetFrameFromFile("button.txt", Image::FindResolution("button.txt"), 1), nullptr);
+		Button button3(label3, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), nullptr, "MM_cursor.txt");
 		Label label2("Exit");
-		Button button2(label2, Image::GetFrameFromFile("button.txt", Image::FindResolution("button.txt"), 1), []() { system("cls"); exit(0); });
+		Button button2(label2, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), []() { system("cls"); exit(0); }, "MM_cursor.txt");
 
 		menu.AddButton(button1);
 		menu.AddButton(button3);
 		menu.AddButton(button2);
 
 		menu.GetCursor().SetButton(menu.GetButton(0));
-		menu.GetCursor().GetTexture().SetImage("cursor.txt", Image::FindResolution("cursor.txt"), 1);
-		menu.GetCursor().GetBuffer().Resize(Image::FindResolution("cursor.txt"));
+		menu.GetCursor().GetTexture().SetImage("MM_cursor.txt", Image::FindResolution("MM_cursor.txt"), 1);
+		menu.GetCursor().GetBuffer().Resize(Image::FindResolution("MM_cursor.txt"));
 		menu.GetCursor().LoadTextureToCursor(__COORD{ 0,0 });
 
 		Resolution newResolution{ 15,20 };
@@ -63,7 +84,7 @@ void MainMenu()
 
 		});
 
-	menu.StartSetupFunc(menu);
+	Menu::StartSetupFunc(menu);
 
 	size_t counter = 1;
 
@@ -79,6 +100,9 @@ void MainMenu()
 		mainMenuAnimation.LoadFrameToBuffer(buffer, __COORD{ 0,0 }, counter);
 		logo.LoadToBuffer(buffer, __COORD{ 1,2 });
 		menu.LoadToBuffer(buffer, __COORD{ 10,5 });
+		control1.LoadToBuffer(buffer, __COORD{ 23, 2 });
+		control2.LoadToBuffer(buffer, __COORD{ 24, 2 });
+
 
 		counter++;
 		buffer.Print();

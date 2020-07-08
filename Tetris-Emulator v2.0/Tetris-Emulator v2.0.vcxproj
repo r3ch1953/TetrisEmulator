@@ -142,6 +142,7 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Buffer.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ButtonAnimated.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="Label.cpp" />
@@ -152,17 +153,21 @@
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Buffer.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="ButtonAnimated.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="Label.h" />
     <ClInclude Include="Menu.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="button.txt" />
-    <Text Include="cursor.txt" />
-    <Text Include="logo.txt" />
-    <Text Include="border.txt" />
-    <Text Include="mainMenuAnim.txt" />
+    <Text Include="SGM_border.txt" />
+    <Text Include="MM_button.txt" />
+    <Text Include="MM_cursor.txt" />
+    <Text Include="MM_logo.txt" />
+    <Text Include="MM_border.txt" />
+    <Text Include="MM_anim.txt" />
+    <Text Include="SGM_buttonDefault.txt" />
+    <Text Include="SGM_concept.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -9,13 +9,15 @@ class Button
 {
 protected:
 	Buffer button;
+	function<void()> buttonFunc = nullptr;
+
+private:
 	Label label;
 	Image texture;
-	function<void()> buttonFunc = nullptr;
 
 public:
 	Button();
-	Button(Label label, Image texture, function<void()> buttonFunc);
+	Button(Label label, Image texture, function<void()> buttonFunc, string cursorTexture); // Cursor& cursor - GetTexture();
 	Button(const Button& button);
 
 	Label& GetLabel();
@@ -26,7 +28,7 @@ public:
 
 	void LoadLabelToButton(__COORD coord);
 	void LoadTextureToButton(__COORD coord);
-	void LoadToBuffer(Buffer& buffer, __COORD coord);
+	virtual void LoadToBuffer(Buffer& buffer, __COORD coord);
 
 	void StartButtonFunc() const;
 };

@@ -10,20 +10,23 @@
     <ClCompile Include="Image.cpp">
       <Filter>Draw\Image/Animation</Filter>
     </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Input</Filter>
-    </ClCompile>
     <ClCompile Include="Label.cpp">
       <Filter>Draw\Text</Filter>
-    </ClCompile>
-    <ClCompile Include="Cursor.cpp">
-      <Filter>Input</Filter>
     </ClCompile>
     <ClCompile Include="Menu.cpp">
       <Filter>Menu</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Input\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonAnimated.cpp">
+      <Filter>Input\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="Cursor.cpp">
+      <Filter>Input\Cursors</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +51,18 @@
     <Filter Include="Resource">
       <UniqueIdentifier>{21f54897-2cc1-4768-9f54-d49b76f9e165}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Input\Buttons">
+      <UniqueIdentifier>{a0beb032-89aa-49d8-a3fd-faf3000ac375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Cursors">
+      <UniqueIdentifier>{27b07164-f73c-45f4-96be-fede6584f1a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\SelectGameMenu">
+      <UniqueIdentifier>{b12fbbbb-0565-4a6a-b006-3b46e4349eae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\MainMenu">
+      <UniqueIdentifier>{9fccf90a-25a0-4260-97c3-a558be8df1f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Buffer.h">
@@ -59,34 +74,46 @@
     <ClInclude Include="Image.h">
       <Filter>Draw\Image/Animation</Filter>
     </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Input</Filter>
-    </ClInclude>
     <ClInclude Include="Label.h">
       <Filter>Draw\Text</Filter>
-    </ClInclude>
-    <ClInclude Include="Cursor.h">
-      <Filter>Input</Filter>
     </ClInclude>
     <ClInclude Include="Menu.h">
       <Filter>Menu</Filter>
     </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Input\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.h">
+      <Filter>Input\Cursors</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonAnimated.h">
+      <Filter>Input\Buttons</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="button.txt">
-      <Filter>Resource</Filter>
+    <Text Include="SGM_border.txt">
+      <Filter>Resource\SelectGameMenu</Filter>
     </Text>
-    <Text Include="cursor.txt">
-      <Filter>Resource</Filter>
+    <Text Include="MM_border.txt">
+      <Filter>Resource\MainMenu</Filter>
     </Text>
-    <Text Include="logo.txt">
-      <Filter>Resource</Filter>
+    <Text Include="MM_cursor.txt">
+      <Filter>Resource\MainMenu</Filter>
     </Text>
-    <Text Include="border.txt">
-      <Filter>Resource</Filter>
+    <Text Include="MM_logo.txt">
+      <Filter>Resource\MainMenu</Filter>
     </Text>
-    <Text Include="mainMenuAnim.txt">
-      <Filter>Resource</Filter>
+    <Text Include="MM_anim.txt">
+      <Filter>Resource\MainMenu</Filter>
+    </Text>
+    <Text Include="MM_button.txt">
+      <Filter>Resource\MainMenu</Filter>
+    </Text>
+    <Text Include="SGM_concept.txt">
+      <Filter>Resource\SelectGameMenu</Filter>
+    </Text>
+    <Text Include="SGM_buttonDefault.txt">
+      <Filter>Resource\SelectGameMenu</Filter>
     </Text>
   </ItemGroup>
 </Project>

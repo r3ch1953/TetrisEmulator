@@ -7,11 +7,11 @@ Button::Button()
 	// empty
 }
 
-Button::Button(Label label, Image texture, function<void()> buttonFunc)
+Button::Button(Label label, Image texture, function<void()> buttonFunc, string cursorTexture)
 {
 	this->label.SetText(label.GetText());
 	this->texture = texture;
-	this->button.Resize(Resolution{ texture.GetResolution().height, texture.GetResolution().width + Image::FindResolution("cursor.txt").width });
+	this->button.Resize(Resolution{ texture.GetResolution().height, texture.GetResolution().width + Image::FindResolution(cursorTexture).width});
 
 	SetButtonFunc(buttonFunc);
 }

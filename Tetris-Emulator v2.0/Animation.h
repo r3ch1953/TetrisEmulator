@@ -22,7 +22,9 @@ public:
 	void SetAnimation(string filename, size_t framesCount);
 	void AddFrame(Image image);
 
+	Image& GetFrame(size_t index);
 	size_t GetFramesCount() const;
+	static size_t GetFramesCount(string filename);
 
 	void LoadFrameToBuffer(Buffer& buffer, __COORD coord, size_t frame);
 };
