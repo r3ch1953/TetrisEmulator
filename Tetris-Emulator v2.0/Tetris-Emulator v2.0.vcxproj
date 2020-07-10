@@ -143,23 +143,35 @@
     <ClCompile Include="Buffer.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="ButtonAnimated.cpp" />
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="CarEnemy.cpp" />
     <ClCompile Include="Cursor.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="Label.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MenuAnimated.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Buffer.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="ButtonAnimated.h" />
+    <ClInclude Include="Car.h" />
+    <ClInclude Include="CarEnemy.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="Label.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="MenuAnimated.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="R_cars.txt" />
+    <Text Include="R_end.txt" />
+    <Text Include="R_gameField.txt" />
+    <Text Include="R_scoreBoard.txt" />
     <Text Include="SGM_border.txt" />
     <Text Include="MM_button.txt" />
     <Text Include="MM_cursor.txt" />

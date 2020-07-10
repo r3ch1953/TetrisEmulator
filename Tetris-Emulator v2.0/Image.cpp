@@ -59,7 +59,8 @@ Resolution Image::FindResolution(std::string filename)
 	fread.close();
 
 	resolution.width = (resolution.width / resolution.height) + 1;
-	resolution.height = resolution.height / (counter - 1);
+	if(counter != 1)
+		resolution.height = resolution.height / (counter - 1);
 
 	return resolution;
 }
@@ -135,6 +136,11 @@ void Image::SetBackground(Color color)
 	for (size_t i = 0; i < image.GetHeight(); i++)
 		for (size_t j = 0; j < image.GetWidth(); j++)
 			image.buffer[i][j].background = color;
+}
+
+Buffer& Image::GetBuffer()
+{
+	return this->image;
 }
 
 Image Image::GetFrameFromFile(std::string filename, Resolution resolution, size_t frame)

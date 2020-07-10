@@ -15,9 +15,9 @@ Animation& ButtonAnimated::GetAnimation()
 	return this->animation;
 }
 
-void ButtonAnimated::LoadAnimationToButton(Buffer& buffer, __COORD coord)
+void ButtonAnimated::LoadAnimationToButton(__COORD coord)
 {
-	this->animation.LoadFrameToBuffer(buffer, coord, frameCounter);
+	this->animation.LoadFrameToBuffer(this->button, coord, frameCounter);
 
 	this->frameCounter++;
 	if (this->frameCounter > this->animation.GetFramesCount())
@@ -26,7 +26,7 @@ void ButtonAnimated::LoadAnimationToButton(Buffer& buffer, __COORD coord)
 
 void ButtonAnimated::LoadToBuffer(Buffer& buffer, __COORD coord)
 {
-	LoadAnimationToButton(this->button, __COORD{0, 0});
+	LoadAnimationToButton(__COORD{0, 0});
 
  	if ((coord.y + this->button.GetHeight()) > buffer.GetHeight() || (coord.x + this->button.GetWidth()) > buffer.GetWidth())
 	{
@@ -45,7 +45,7 @@ void ButtonAnimated::LoadToBuffer(Buffer& buffer, __COORD coord)
 
 void ButtonAnimated::LoadToBuffer(Buffer& buffer, __COORD coord, __COORD buttonStart)
 {
-	LoadAnimationToButton(this->button, __COORD{0, 0});
+	LoadAnimationToButton(__COORD{0, 0});
 
 	if ((coord.y + this->button.GetHeight()) > buffer.GetHeight() || (coord.x + this->button.GetWidth()) > buffer.GetWidth())
 	{

@@ -21,6 +21,7 @@ public:
 	Color GetBackground() const;
 	size_t GetLenght() const;
 
+	void Clear();
 	void SetText(string text);
 	void SetColor(Color color);
 	void SetBackground(Color color);

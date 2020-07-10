@@ -20,6 +20,8 @@ public:
 	void SetColor(Color color);
 	void SetBackground(Color color);
 
+	Buffer& GetBuffer();
+
 	static Image GetFrameFromFile(std::string filename, Resolution resolution, size_t frame);
 
 	void LoadToBuffer(Buffer& buffer, __COORD coord);

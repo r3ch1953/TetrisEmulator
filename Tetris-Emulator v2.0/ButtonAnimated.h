@@ -13,7 +13,7 @@ public:
 
 	Animation& GetAnimation();
 
-	void LoadAnimationToButton(Buffer& buffer, __COORD coord);
+	void LoadAnimationToButton( __COORD coord);
 	void LoadToBuffer(Buffer& buffer, __COORD coord) override;
 	void LoadToBuffer(Buffer& buffer, __COORD coord, __COORD buttonStart);
 };

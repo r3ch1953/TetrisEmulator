@@ -52,7 +52,7 @@ void Animation::AddFrame(Image image)
 
 Image& Animation::GetFrame(size_t index)
 {
-	if(index > GetFramesCount())
+	if(index <= GetFramesCount())
 		return this->frames[index];
 	return this->frames[0];
 }

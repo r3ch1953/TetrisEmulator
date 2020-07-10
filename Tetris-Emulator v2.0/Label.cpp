@@ -44,6 +44,11 @@ size_t Label::GetLenght() const
 	return text.length();
 }
 
+void Label::Clear()
+{
+	this->text.clear();
+}
+
 void Label::SetText(string text)
 {
 	if (!text.empty())

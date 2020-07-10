@@ -9,25 +9,28 @@ using namespace std;
 
 class Menu
 {
-private:
-	Cursor cursor;
-	vector<Button> buttons;
+protected:
 	Buffer menu;
+	Cursor cursor;
+
+private:
+	vector<Button> buttons;
 	function<void(Menu& menu)> setup;
 
 public:
+	Menu();
 	Menu(function<void(Menu& menu)> setup);
 	Menu(Cursor cursor, vector<Button> buttons, Buffer menu);
 	
 	Cursor& GetCursor();
 	Button& GetButton(size_t index);
 	Buffer& GetBuffer();
-	size_t GetButtonsVectorSize() const;
+	virtual size_t GetButtonsVectorSize() const;
 
 	void AddButton(Button& button);
-	void CursorPos(int key);
+	virtual void CursorPos(int key);
 
-	void LoadToBuffer(Buffer& buffer, __COORD coord);
+	virtual void LoadToBuffer(Buffer& buffer, __COORD coord);
 
 	static void StartSetupFunc(Menu& menu);
 };

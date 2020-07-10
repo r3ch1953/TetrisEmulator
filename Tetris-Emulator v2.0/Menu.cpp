@@ -1,6 +1,11 @@
 #include "Menu.h"
 #include <iostream>
 
+Menu::Menu()
+{
+	// empty
+}
+
 Menu::Menu(function<void(Menu& menu)> setup)
 {
 	if (setup != nullptr)
@@ -73,9 +78,7 @@ void Menu::CursorPos(int key)
 			newIndex = 0;
 		this->cursor.SetButton(this->buttons[newIndex]);
 		break;
-	}
-
-	
+	}	
 }
 
 void Menu::LoadToBuffer(Buffer& buffer, __COORD coord)

@@ -43,7 +43,7 @@ class Buffer
 {
 private:
 	Resolution resolution;
-	Pixel** buffer;
+	Pixel** buffer = nullptr;
 
 public:
 	Buffer();

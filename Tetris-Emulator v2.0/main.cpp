@@ -4,6 +4,8 @@
 #include "Button.h"
 #include "Menu.h"
 #include "ButtonAnimated.h"
+#include "Car.h"
+#include "Map.h"
 #include <conio.h>
 #include <iostream>
 #include <Windows.h>
@@ -17,29 +19,11 @@ void setcur(int x, int y)
 };
 
 void MainMenu();
+void Racing();
 
 int main()
 {
-	//MainMenu();
-
-	Buffer testb(Image::FindResolution("SGM_concept.txt"));
-
-	Animation test("SGM_buttonDefault.txt", Animation::GetFramesCount("SGM_buttonDefault.txt"));
-	
-	ButtonAnimated b(test, nullptr, "MM_cursor.txt");
-
-	while(true) { 
-
-		b.LoadToBuffer(testb, __COORD{ 10,10 }, __COORD{b.GetAnimation().GetFrame(0).GetResolution().height / 2, 
-			                                            b.GetAnimation().GetFrame(0).GetResolution().width / 2 });
-
-		testb.Print();
-		Sleep(100);
-		setcur(0, 0);
-	}
-		
-	
-
+	MainMenu();
 	return 0;
 }
 
@@ -63,7 +47,7 @@ void MainMenu()
 
 	Menu menu([](Menu& menu) {
 		Label label1("Play");
-		Button button1(label1, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), nullptr, "MM_cursor.txt");
+		Button button1(label1, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), Racing, "MM_cursor.txt");
 		Label label3("Settings");
 		Button button3(label3, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), nullptr, "MM_cursor.txt");
 		Label label2("Exit");
@@ -109,4 +93,34 @@ void MainMenu()
 		Sleep(10);
 		setcur(0, 0);
 	}
+	system("cls");
+}
+
+void Racing()
+{
+	system("cls");
+
+	Label scoreStr("Score: ");
+	Map map(Image::GetFrameFromFile("R_scoreBoard.txt", Image::FindResolution("R_scoreBoard.txt"), 1),
+			Image::GetFrameFromFile("R_gameField.txt", Image::FindResolution("R_gameField.txt"), 1),
+			scoreStr,
+			Image::GetFrameFromFile("R_cars.txt", Image::FindResolution("R_cars.txt"), 1));
+
+	Buffer buffer(Resolution{ Image::FindResolution("R_gameField.txt").height + Image::FindResolution("R_scoreBoard.txt").height, Image::FindResolution("R_gameField.txt").width });
+	while (!map.GetGameOver())
+	{
+		map.LoadToBuffer(buffer, __COORD{ 0,0 });
+
+		if (_kbhit())
+			map.Control(_getch());
+
+		buffer.Print();
+		setcur(0, 0);
+	}
+
+	buffer.Clear();
+	map.ShowGameOverScreen(buffer);
+	buffer.Print();
+	system("pause");
+	system("cls");
 }
