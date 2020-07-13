@@ -11,11 +11,13 @@ struct ButtonColor
 
 class Cursor
 {
-private:
-	Button* button;
+protected:
 	Image texture;
 	Buffer cursor;
 	ButtonColor buttonColor;
+
+private:
+	Button* button;
 
 public:
 	Cursor();

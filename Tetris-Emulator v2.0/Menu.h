@@ -11,10 +11,10 @@ class Menu
 {
 protected:
 	Buffer menu;
-	Cursor cursor;
-
+	
 private:
 	vector<Button> buttons;
+	Cursor cursor;
 	function<void(Menu& menu)> setup;
 
 public:

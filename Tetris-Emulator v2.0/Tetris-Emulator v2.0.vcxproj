@@ -142,7 +142,6 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Buffer.cpp" />
     <ClCompile Include="Button.cpp" />
-    <ClCompile Include="ButtonAnimated.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="CarEnemy.cpp" />
     <ClCompile Include="Cursor.cpp" />
@@ -151,13 +150,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="MenuAnimated.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Buffer.h" />
     <ClInclude Include="Button.h" />
-    <ClInclude Include="ButtonAnimated.h" />
     <ClInclude Include="Car.h" />
     <ClInclude Include="CarEnemy.h" />
     <ClInclude Include="Cursor.h" />
@@ -165,7 +162,6 @@
     <ClInclude Include="Label.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Menu.h" />
-    <ClInclude Include="MenuAnimated.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="R_cars.txt" />

@@ -22,14 +22,8 @@
     <ClCompile Include="Button.cpp">
       <Filter>Input\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="ButtonAnimated.cpp">
-      <Filter>Input\Buttons</Filter>
-    </ClCompile>
     <ClCompile Include="Cursor.cpp">
       <Filter>Input\Cursors</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuAnimated.cpp">
-      <Filter>Menu</Filter>
     </ClCompile>
     <ClCompile Include="Car.cpp">
       <Filter>Racing</Filter>
@@ -103,12 +97,6 @@
     </ClInclude>
     <ClInclude Include="Cursor.h">
       <Filter>Input\Cursors</Filter>
-    </ClInclude>
-    <ClInclude Include="ButtonAnimated.h">
-      <Filter>Input\Buttons</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuAnimated.h">
-      <Filter>Menu</Filter>
     </ClInclude>
     <ClInclude Include="Car.h">
       <Filter>Racing</Filter>
