@@ -71,7 +71,7 @@ void Buffer::Resize(Resolution resolution)
 	this->resolution.height = resolution.height;
 	this->resolution.width = resolution.width;
 
-	buffer = new Pixel* [this->resolution.height];
+	buffer = new Pixel * [this->resolution.height];
 	for (size_t i = 0; i < this->resolution.height; i++)
 		buffer[i] = new Pixel[this->resolution.width];
 

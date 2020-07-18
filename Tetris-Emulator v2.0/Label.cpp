@@ -86,4 +86,3 @@ void Label::operator=(const Label& label)
 	this->color = label.color;
 	this->background = label.background;
 }
-

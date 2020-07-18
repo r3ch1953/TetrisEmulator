@@ -28,4 +28,3 @@ public:
 
 	void LoadFrameToBuffer(Buffer& buffer, __COORD coord, size_t frame);
 };
-

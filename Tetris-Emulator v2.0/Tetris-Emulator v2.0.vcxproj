@@ -145,6 +145,8 @@
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="CarEnemy.cpp" />
     <ClCompile Include="Cursor.cpp" />
+    <ClCompile Include="Figure.cpp" />
+    <ClCompile Include="GameField.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="Label.cpp" />
     <ClCompile Include="main.cpp" />
@@ -158,6 +160,8 @@
     <ClInclude Include="Car.h" />
     <ClInclude Include="CarEnemy.h" />
     <ClInclude Include="Cursor.h" />
+    <ClInclude Include="Figure.h" />
+    <ClInclude Include="GameField.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="Label.h" />
     <ClInclude Include="Map.h" />
@@ -176,6 +180,10 @@
     <Text Include="MM_anim.txt" />
     <Text Include="SGM_buttonDefault.txt" />
     <Text Include="SGM_concept.txt" />
+    <Text Include="temp.txt" />
+    <Text Include="T_texture.txt" />
+    <Text Include="T_figures.txt" />
+    <Text Include="T_gameField.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

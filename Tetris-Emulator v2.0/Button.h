@@ -32,4 +32,3 @@ public:
 
 	void StartButtonFunc() const;
 };
-

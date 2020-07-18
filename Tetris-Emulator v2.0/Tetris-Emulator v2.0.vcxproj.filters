@@ -34,6 +34,12 @@
     <ClCompile Include="CarEnemy.cpp">
       <Filter>Racing</Filter>
     </ClCompile>
+    <ClCompile Include="Figure.cpp">
+      <Filter>Tetris</Filter>
+    </ClCompile>
+    <ClCompile Include="GameField.cpp">
+      <Filter>Tetris</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Draw">
@@ -75,6 +81,12 @@
     <Filter Include="Resource\Racing">
       <UniqueIdentifier>{71c481c6-d3c8-4ca3-82ee-6c81d00f1f3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tetris">
+      <UniqueIdentifier>{6f4fa797-14d0-4ccc-9d02-c8cdfaa79c26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource\Tetris">
+      <UniqueIdentifier>{c5a8ec29-8720-41f2-8ada-09fefe931238}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Buffer.h">
@@ -106,6 +118,12 @@
     </ClInclude>
     <ClInclude Include="CarEnemy.h">
       <Filter>Racing</Filter>
+    </ClInclude>
+    <ClInclude Include="Figure.h">
+      <Filter>Tetris</Filter>
+    </ClInclude>
+    <ClInclude Include="GameField.h">
+      <Filter>Tetris</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +162,18 @@
     </Text>
     <Text Include="R_end.txt">
       <Filter>Resource\Racing</Filter>
+    </Text>
+    <Text Include="temp.txt">
+      <Filter>Resource</Filter>
+    </Text>
+    <Text Include="T_figures.txt">
+      <Filter>Resource\Tetris</Filter>
+    </Text>
+    <Text Include="T_gameField.txt">
+      <Filter>Resource\Tetris</Filter>
+    </Text>
+    <Text Include="T_texture.txt">
+      <Filter>Resource\Tetris</Filter>
     </Text>
   </ItemGroup>
 </Project>

@@ -38,6 +38,4 @@ public:
 
 	virtual void LoadToBuffer(Buffer& buffer);
 	void LoadToBuffer(Buffer& buffer, __COORD coord);
-
 };
-

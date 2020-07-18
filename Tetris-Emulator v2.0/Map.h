@@ -36,4 +36,3 @@ public:
 	void ShowGameOverScreen(Buffer& buffer);
 	void LoadToBuffer(Buffer& buffer, __COORD coord);
 };
-

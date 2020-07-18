@@ -64,7 +64,7 @@ bool Map::GetGameOver() const
 void Map::ShowGameOverScreen(Buffer& buffer)
 {
 	this->gameField.SetColor(Color::BRIGHTWHITE);
-	this->gameField.LoadToBuffer(buffer, __COORD{0, 0});
+	this->gameField.LoadToBuffer(buffer, __COORD{ 0, 0 });
 
 	Image temp = Image::GetFrameFromFile("R_end.txt", Image::FindResolution("R_end.txt"), 1);
 	temp.SetColor(Color::RED);

@@ -11,7 +11,7 @@ class Menu
 {
 protected:
 	Buffer menu;
-	
+
 private:
 	vector<Button> buttons;
 	Cursor cursor;
@@ -21,7 +21,7 @@ public:
 	Menu();
 	Menu(function<void(Menu& menu)> setup);
 	Menu(Cursor cursor, vector<Button> buttons, Buffer menu);
-	
+
 	Cursor& GetCursor();
 	Button& GetButton(size_t index);
 	Buffer& GetBuffer();
@@ -34,4 +34,3 @@ public:
 
 	static void StartSetupFunc(Menu& menu);
 };
-

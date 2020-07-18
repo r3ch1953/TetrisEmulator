@@ -5,6 +5,9 @@
 #include "Menu.h"
 #include "Car.h"
 #include "Map.h"
+#include "Figure.h"
+#include "GameField.h"
+
 #include <conio.h>
 #include <iostream>
 #include <Windows.h>
@@ -23,7 +26,26 @@ void SelectGameMenu();
 
 int main()
 {
-	MainMenu();
+	//MainMenu();
+
+	Buffer buffer(Resolution{ 20,20 });
+
+	GameField game(Image::GetFrameFromFile("T_gameField.txt", Image::FindResolution("T_gameField.txt"), 1));
+
+	while (true)
+	{
+		while (game.CheckLines());
+
+		if (_kbhit())
+			game.Move(_getch());
+
+		game.LoadToBuffer(buffer, __COORD{ 0,0 });
+		game.Fall();
+		Sleep(300);
+
+		buffer.Print();
+		setcur(0, 0);
+	}
 
 	return 0;
 }
@@ -66,7 +88,6 @@ void MainMenu()
 		Resolution newResolution{ 15,20 };
 
 		menu.GetBuffer().Resize(newResolution);
-
 		});
 
 	Menu::StartSetupFunc(menu);
@@ -88,7 +109,6 @@ void MainMenu()
 		control1.LoadToBuffer(buffer, __COORD{ 23, 2 });
 		control2.LoadToBuffer(buffer, __COORD{ 24, 2 });
 
-
 		counter++;
 		buffer.Print();
 		Sleep(10);
@@ -103,9 +123,9 @@ void Racing()
 
 	Label scoreStr("Score: ");
 	Map map(Image::GetFrameFromFile("R_scoreBoard.txt", Image::FindResolution("R_scoreBoard.txt"), 1),
-			Image::GetFrameFromFile("R_gameField.txt", Image::FindResolution("R_gameField.txt"), 1),
-			scoreStr,
-			Image::GetFrameFromFile("R_cars.txt", Image::FindResolution("R_cars.txt"), 1));
+		Image::GetFrameFromFile("R_gameField.txt", Image::FindResolution("R_gameField.txt"), 1),
+		scoreStr,
+		Image::GetFrameFromFile("R_cars.txt", Image::FindResolution("R_cars.txt"), 1));
 
 	Buffer buffer(Resolution{ Image::FindResolution("R_gameField.txt").height + Image::FindResolution("R_scoreBoard.txt").height, Image::FindResolution("R_gameField.txt").width });
 	while (!map.GetGameOver())
@@ -154,7 +174,7 @@ void SelectGameMenu()
 		Button button3(label3, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), [&exit]() { exit = true; }, "MM_cursor.txt");
 		Label label4("Return");
 		Button button4(label4, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), [&exit]() { exit = true; }, "MM_cursor.txt");
-		
+
 		menu.AddButton(button1);
 		menu.AddButton(button2);
 		menu.AddButton(button3);
@@ -168,13 +188,11 @@ void SelectGameMenu()
 		Resolution newResolution{ 17,20 };
 
 		menu.GetBuffer().Resize(newResolution);
-
 		});
 
 	Menu::StartSetupFunc(menu);
 
 	size_t counter = 1;
-
 
 	while (!exit)
 	{
@@ -190,7 +208,6 @@ void SelectGameMenu()
 		menu.LoadToBuffer(buffer, __COORD{ 10,5 });
 		control1.LoadToBuffer(buffer, __COORD{ 23, 2 });
 		control2.LoadToBuffer(buffer, __COORD{ 24, 2 });
-
 
 		counter++;
 		buffer.Print();

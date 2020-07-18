@@ -20,7 +20,7 @@ enum Color
 	BRIGHTWHITE
 };
 
-struct Resolution 
+struct Resolution
 {
 	size_t height;
 	size_t width;
@@ -50,7 +50,7 @@ public:
 	Buffer(Resolution resolution);
 	Buffer(const Buffer& buffer);
 	~Buffer();
-	
+
 	Resolution GetResolution() const;
 	size_t GetWidth() const;
 	size_t GetHeight() const;
@@ -68,4 +68,3 @@ public:
 
 	void operator = (const Buffer& buffer);
 };
-

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Image.cpp</FILENAME>
+      <LINE>112</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Color' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Image::SetImage</FUNCTION>
+    <DECORATED>?SetImage@Image@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UResolution@@I@Z</DECORATED>
+    <FUNCLINE>72</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

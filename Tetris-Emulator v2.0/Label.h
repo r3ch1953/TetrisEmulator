@@ -25,9 +25,8 @@ public:
 	void SetText(string text);
 	void SetColor(Color color);
 	void SetBackground(Color color);
-	
+
 	void LoadToBuffer(Buffer& buffer, __COORD coord);
 
 	void operator = (const Label& label);
 };
-

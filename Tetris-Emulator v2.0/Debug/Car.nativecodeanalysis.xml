@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Car.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Side' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Car::{ctor}</FUNCTION>
+    <DECORATED>??0Car@@QAE@VImage@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

@@ -53,13 +53,12 @@ Resolution Image::FindResolution(std::string filename)
 		if (temp != '\n' && temp != '@')
 			resolution.width++;
 
-
 		prev = temp;
 	}
 	fread.close();
 
 	resolution.width = (resolution.width / resolution.height) + 1;
-	if(counter != 1)
+	if (counter != 1)
 		resolution.height = resolution.height / (counter - 1);
 
 	return resolution;
@@ -141,6 +140,11 @@ void Image::SetBackground(Color color)
 Buffer& Image::GetBuffer()
 {
 	return this->image;
+}
+
+void Image::SetBuffer(Buffer buffer)
+{
+	this->image = buffer;
 }
 
 Image Image::GetFrameFromFile(std::string filename, Resolution resolution, size_t frame)

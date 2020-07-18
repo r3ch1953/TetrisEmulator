@@ -88,7 +88,7 @@ void Car::LoadToBuffer(Buffer& buffer)
 	switch (this->side)
 	{
 	case Side::UP:
-		for (size_t i = 1, carI = 0; carI < this->car.GetHeight() ; i++, carI++)
+		for (size_t i = 1, carI = 0; carI < this->car.GetHeight(); i++, carI++)
 		{
 			for (size_t j = coordX, carJ = 0; carJ < this->car.GetWidth(); j++, carJ++)
 			{
@@ -108,7 +108,7 @@ void Car::LoadToBuffer(Buffer& buffer)
 	}
 }
 
-void Car::LoadToBuffer(Buffer& buffer,__COORD coord)
+void Car::LoadToBuffer(Buffer& buffer, __COORD coord)
 {
 	this->texture.LoadToBuffer(this->car, __COORD{0, 0});
 	switch (this->side)
@@ -133,4 +133,3 @@ void Car::LoadToBuffer(Buffer& buffer,__COORD coord)
 		break;
 	}
 }
-

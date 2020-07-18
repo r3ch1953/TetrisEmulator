@@ -35,8 +35,7 @@ public:
 	void SetButtonDefaultColor(Color color);
 
 	void SetButton(Button& button);
-	
+
 	void LoadTextureToCursor(__COORD coord);
 	void LoadToBuffer(Buffer& buffer, __COORD coord);
 };
-

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Animation.cpp</FILENAME>
+      <LINE>16</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Color' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Animation::SetColor</FUNCTION>
+    <DECORATED>?SetColor@Animation@@QAEXW4Color@@I@Z</DECORATED>
+    <FUNCLINE>16</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Buffer.h</FILENAME>
+      <LINE>40</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Pixel::symbol' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Pixel::{ctor}</FUNCTION>
+    <DECORATED>??0Pixel@@QAE@XZ</DECORATED>
+    <FUNCLINE>40</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Pixel::symbol</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Buffer.h</FILENAME>
+      <LINE>39</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Color' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Pixel::{ctor}</FUNCTION>
+    <DECORATED>??0Pixel@@QAE@XZ</DECORATED>
+    <FUNCLINE>40</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Car.cpp</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Side' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Car::{ctor}</FUNCTION>
+    <DECORATED>??0Car@@QAE@VImage@@@Z</DECORATED>
+    <FUNCLINE>3</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Cursor.h</FILENAME>
+      <LINE>8</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Color' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>ButtonColor::{ctor}</FUNCTION>
+    <DECORATED>??0ButtonColor@@QAE@XZ</DECORATED>
+    <FUNCLINE>10</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Figure.cpp</FILENAME>
+      <LINE>5</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Figure::index' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Figure::{ctor}</FUNCTION>
+    <DECORATED>??0Figure@@QAE@XZ</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Figure::index</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Figure.cpp</FILENAME>
+      <LINE>10</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'FigureIndex' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Figure::{ctor}</FUNCTION>
+    <DECORATED>??0Figure@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@W4FigureIndex@@@Z</DECORATED>
+    <FUNCLINE>10</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>GameField.cpp</FILENAME>
+      <LINE>19</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Color' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>GameField::GetNewFigure</FUNCTION>
+    <DECORATED>?GetNewFigure@GameField@@QAEXXZ</DECORATED>
+    <FUNCLINE>16</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>GameField.cpp</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'FigureIndex' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Figure::=</FUNCTION>
+    <DECORATED>??4Figure@@QAEAAV0@ABV0@@Z</DECORATED>
+    <FUNCLINE>48</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Image.cpp</FILENAME>
+      <LINE>112</LINE>
+      <COLUMN>48</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Color' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Image::SetImage</FUNCTION>
+    <DECORATED>?SetImage@Image@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UResolution@@I@Z</DECORATED>
+    <FUNCLINE>72</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Label.h</FILENAME>
+      <LINE>10</LINE>
+      <COLUMN>22</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Color' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Label::{ctor}</FUNCTION>
+    <DECORATED>??0Label@@QAE@PAD@Z</DECORATED>
+    <FUNCLINE>5</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>Map.cpp</FILENAME>
+      <LINE>57</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Side' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Car::{ctor}</FUNCTION>
+    <DECORATED>??0Car@@QAE@$$QAV0@@Z</DECORATED>
+    <FUNCLINE>41</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

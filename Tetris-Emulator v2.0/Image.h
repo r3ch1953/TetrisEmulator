@@ -21,6 +21,7 @@ public:
 	void SetBackground(Color color);
 
 	Buffer& GetBuffer();
+	void SetBuffer(Buffer buffer);
 
 	static Image GetFrameFromFile(std::string filename, Resolution resolution, size_t frame);
 
@@ -28,4 +29,3 @@ public:
 
 	void operator = (const Image& image);
 };
-

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>GameField.cpp</FILENAME>
+      <LINE>19</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'Color' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>GameField::GetNewFigure</FUNCTION>
+    <DECORATED>?GetNewFigure@GameField@@QAEXXZ</DECORATED>
+    <FUNCLINE>16</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\twice\source\repos\Tetris-Emulator v2.0\Tetris-Emulator v2.0\</FILEPATH>
+      <FILENAME>GameField.cpp</FILENAME>
+      <LINE>25</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26812</DEFECTCODE>
+    <DESCRIPTION>The enum type 'FigureIndex' is unscoped. Prefer 'enum class' over 'enum' (Enum.3).</DESCRIPTION>
+    <FUNCTION>Figure::=</FUNCTION>
+    <DECORATED>??4Figure@@QAEAAV0@ABV0@@Z</DECORATED>
+    <FUNCLINE>48</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>
