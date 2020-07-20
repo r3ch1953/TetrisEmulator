@@ -7,6 +7,7 @@
 #include "Map.h"
 #include "Figure.h"
 #include "GameField.h"
+#include "Label.h"
 
 #include <conio.h>
 #include <iostream>
@@ -22,30 +23,12 @@ void setcur(int x, int y)
 
 void MainMenu();
 void Racing();
+void Tetris();
 void SelectGameMenu();
 
 int main()
 {
-	//MainMenu();
-
-	Buffer buffer(Resolution{ 20,20 });
-
-	GameField game(Image::GetFrameFromFile("T_gameField.txt", Image::FindResolution("T_gameField.txt"), 1));
-
-	while (true)
-	{
-		while (game.CheckLines());
-
-		if (_kbhit())
-			game.Move(_getch());
-
-		game.LoadToBuffer(buffer, __COORD{ 0,0 });
-		game.Fall();
-		Sleep(300);
-
-		buffer.Print();
-		setcur(0, 0);
-	}
+	MainMenu();
 
 	return 0;
 }
@@ -146,6 +129,47 @@ void Racing()
 	system("cls");
 }
 
+void Tetris()
+{
+	system("cls");
+
+	Label score;
+	Image gameOverScreen("T_gameOver.txt");
+
+	Buffer buffer(Resolution{ 20,20 });
+
+	GameField game(Image::GetFrameFromFile("T_gameField.txt", Image::FindResolution("T_gameField.txt"), 1));
+
+	while (!game.GameOver())
+	{
+		while (game.CheckLines());
+
+		if (_kbhit())
+			game.Move(_getch());
+
+		game.LoadToBuffer(buffer, __COORD{ 0,0 });
+		game.Fall();
+		Sleep(300);
+
+		buffer.Print();
+		setcur(0, 0);
+	}
+
+	Sleep(500);
+	system("cls");
+
+	buffer.Clear();
+	buffer.Resize(gameOverScreen.GetResolution());
+	gameOverScreen.LoadToBuffer(buffer, __COORD{ 0,0 });
+	score.SetText(to_string(game.GetScore()));
+	score.LoadToBuffer(buffer, __COORD{ 3,9 });
+
+	buffer.Print();
+
+	system("pause");
+	system("cls");
+}
+
 void SelectGameMenu()
 {
 	Buffer buffer(Image::FindResolution("MM_border.txt"));
@@ -169,7 +193,7 @@ void SelectGameMenu()
 		Label label1("Racing");
 		Button button1(label1, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), Racing, "MM_cursor.txt");
 		Label label2("Tetris");
-		Button button2(label2, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), [&exit]() { exit = true; }, "MM_cursor.txt");
+		Button button2(label2, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), Tetris, "MM_cursor.txt");
 		Label label3("Ping Pong");
 		Button button3(label3, Image::GetFrameFromFile("MM_button.txt", Image::FindResolution("MM_button.txt"), 1), [&exit]() { exit = true; }, "MM_cursor.txt");
 		Label label4("Return");

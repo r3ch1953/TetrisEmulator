@@ -35,7 +35,7 @@ struct __COORD
 struct Pixel
 {
 	char symbol;
-	Color color;
+	Color color = Color::WHITE;
 	Color background = Color::BLACK;
 };
 

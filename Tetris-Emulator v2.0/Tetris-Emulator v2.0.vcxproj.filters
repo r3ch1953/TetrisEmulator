@@ -175,5 +175,8 @@
     <Text Include="T_texture.txt">
       <Filter>Resource\Tetris</Filter>
     </Text>
+    <Text Include="T_gameOver.txt">
+      <Filter>Resource\Tetris</Filter>
+    </Text>
   </ItemGroup>
 </Project>

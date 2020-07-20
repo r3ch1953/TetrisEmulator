@@ -83,20 +83,31 @@ void GameField::Fall()
 			{
 				if (!CheckParts(this->figure.GetParts(), __COORD{ (item.y + 1), item.x }))
 				{
+					if (this->step == 0)
+						this->gameOver = true;
+
 					this->figure.LoadToBuffer(this->fallenFigures);
 					GetNewFigure();
+
+					this->step = 0;
 					return;
 				}
 			}
 		}
 		else if ((item.y + 1) == this->fallenFigures.GetHeight() - 1)
 		{
+			if (this->step == 0)
+				this->gameOver = true;
+
 			this->figure.LoadToBuffer(this->fallenFigures);
 			GetNewFigure();
+
+			this->step = 0;
 			return;
 		}
 	}
 	this->figure.SetCoord(__COORD{ (this->figure.GetCoord().y + 1), this->figure.GetCoord().x });
+	++this->step;
 }
 
 bool GameField::CheckLines()
@@ -144,12 +155,17 @@ bool GameField::CheckLines()
 
 	for (size_t i = this->fallenFigures.GetHeight(); i > 0; i--)
 	{
-		for (size_t j = this->fallenFigures.GetWidth() - 2; j > 0; j--)
+		for (size_t j = this->fallenFigures.GetWidth() - 3; j > 0; j--)
 		{
-
+			if (i < lineStart.y)
+			{
+				this->fallenFigures.Replace(this->fallenFigures.GetPixel(__COORD{ i,j }), __COORD{ (i + 1), j });
+				this->fallenFigures.Replace(Pixel{' ', }, __COORD{ i, j });
+			}
 		}
 	}
 
+	this->scores += 100;
 	return lineIsFound;
 }
 
@@ -164,6 +180,16 @@ bool GameField::CheckParts(vector<__COORD> parts, __COORD coord)
 		}
 	}
 	return false;
+}
+
+bool GameField::GameOver() const
+{
+	return this->gameOver;
+}
+
+size_t GameField::GetScore() const
+{
+	return this->scores;
 }
 
 void GameField::LoadFallenFiguresToField()

@@ -11,6 +11,8 @@ private:
 	Image texture;
 	Figure figure;
 	size_t scores;
+	bool gameOver = false;
+	size_t step = 0;
 
 public:
 	GameField(Image texture);
@@ -21,6 +23,8 @@ public:
 	void Fall();
 	bool CheckLines();
 	bool CheckParts(vector<__COORD> parts, __COORD coord);
+	bool GameOver() const;
+	size_t GetScore() const;
 
 	void LoadFallenFiguresToField();
 	void LoadToBuffer(Buffer& buffer, __COORD coord);

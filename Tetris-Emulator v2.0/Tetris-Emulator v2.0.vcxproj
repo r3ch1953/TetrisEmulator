@@ -181,6 +181,7 @@
     <Text Include="SGM_buttonDefault.txt" />
     <Text Include="SGM_concept.txt" />
     <Text Include="temp.txt" />
+    <Text Include="T_gameOver.txt" />
     <Text Include="T_texture.txt" />
     <Text Include="T_figures.txt" />
     <Text Include="T_gameField.txt" />
